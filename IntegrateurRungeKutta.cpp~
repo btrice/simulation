@@ -1,0 +1,12 @@
+#include "IntegrateurRungeKutta.h"
+void IntegrateurRungeKutta::avance(Vecteur3D& _x,Vecteur3D& _v,void *f(Vecteur3D&,Vecteur3D&),double dt ){
+	Vecteur3D A1,A2,g;
+	double pas=0.1;
+	g=*(Vecteur3D*)((*f)(_x,_v));
+	A1 = _x + (pas/2) * _v;
+	A1 = _v + (pas/2) * g;
+	
+	
+	
+	
+}
